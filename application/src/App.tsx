@@ -1,15 +1,11 @@
-import ReactDOM from "react-dom/client";
+import "./App.css";
 
-import "./index.css";
+function App() {
+	return (
+		<div className="App">
+			This is an microfrontend application
+		</div>
+	);
+}
 
-const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: application</div>
-    <div>Framework: react-19</div>
-    <div>It's an microfrontend application</div>
-  </div>
-);
-
-const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
-
-root.render(<App />);
+export default App;
