@@ -1,4 +1,3 @@
-import { defineConfig } from '@rspack/cli';
 import { rspack } from '@rspack/core';
 import ReactRefreshRspackPlugin from '@rspack/plugin-react-refresh';
 import { withZephyr } from 'zephyr-webpack-plugin';
@@ -53,7 +52,7 @@ export default withZephyr()({
 	 new rspack.container.ModuleFederationPlugin({
       name: 'mfe_host',
       remotes: {
-		applicationMFE: "applicationMFE@http://localhost:3001/remoteEntry.js",
+		application: "application@https://rhayann-13-application-zephyr-mfe-rhayann1337-e68808e07-ze.zephyrcloud.app/remoteEntry.js",
 	  },
       shared: {
         react: { eager: true },

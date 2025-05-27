@@ -1,6 +1,10 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
+
+const Application = React.lazy(() => import('application/App'));
+
 import "./App.css";
+import React from "react";
 
 function App() {
 	const [count, setCount] = useState(0);
