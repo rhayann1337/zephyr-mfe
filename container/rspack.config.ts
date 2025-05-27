@@ -52,7 +52,7 @@ export default withZephyr()({
 	 new rspack.container.ModuleFederationPlugin({
       name: 'mfe_host',
       remotes: {
-		application: "application@https://rhayann-13-application-zephyr-mfe-rhayann1337-e68808e07-ze.zephyrcloud.app/remoteEntry.js",
+		  application: "application@https://rhayann-16-application-zephyr-mfe-rhayann1337-115f44346-ze.zephyrcloud.app/remoteEntry.js",
 	  },
       shared: {
         react: { eager: true },
