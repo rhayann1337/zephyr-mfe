@@ -50,6 +50,17 @@ export default withZephyr()({
   },
   // @ts-expect-error Below are non-blocking error and we are working on improving them
   plugins: [
+	 new rspack.container.ModuleFederationPlugin({
+      name: 'mfe_host',
+      remotes: {
+		applicationMFE: "applicationMFE@http://localhost:3001/remoteEntry.js",
+	  },
+      shared: {
+        react: { eager: true },
+        'react-dom': { eager: true },
+        'react-router-dom': { eager: true },
+      },
+    }),
     new rspack.HtmlRspackPlugin({
       template: './index.html',
     }),
